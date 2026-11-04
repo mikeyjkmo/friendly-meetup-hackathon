@@ -7,6 +7,7 @@ Each check gets the agent's `result` and the `value` from the test case, and ret
   {"answer": "...", "tool_calls": [{"name": "get_order", "args": {"order_id": "PP-1001"}}],
    "latency_s": 3.2, "tokens": 812}
 """
+from pprint import pprint
 
 
 def contains(result: dict, value: str) -> bool:
@@ -19,7 +20,16 @@ def not_contains(result: dict, value: str) -> bool:
 
 def tool_called(result: dict, value: str) -> bool | None:
     # TODO (Level 2): return True if the agent called the tool named `value`.
-    return None
+    # print(value)
+    # pprint(result)
+
+    tool_calls = result.get("tool_calls")
+
+    for tool_call in tool_calls:
+        if tool_call["name"] == value:
+            return True
+
+    return False
 
 
 # TODO (Level 2): add your own checks here, then register them below. Ideas:
