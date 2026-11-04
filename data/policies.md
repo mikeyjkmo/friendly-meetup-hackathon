@@ -44,7 +44,7 @@ We do not carry: lithium batteries sent on their own, aerosols, perfume over 100
 
 ## Changing a delivery address
 
-The address can be changed until the parcel status is "out for delivery". After that, it cannot be changed.
+The address can be changed until the parcel status is "out for delivery". After that, it cannot be changed. To request a change, customers must email help@parcelpigeon.example with their order ID and the new address.
 
 ## Privacy
 
